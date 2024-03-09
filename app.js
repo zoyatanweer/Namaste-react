@@ -1,32 +1,35 @@
-// ReactElemet(Object) => HTML(Browser understands)
+import React from "react";
+import ReactDOM from "react-dom/client";
 
-// const parent = React.createElement(
-//   "div",
-//   { id: "parent" },
-//   React.createElement("div", { id: "child" }, [
-//     React.createElement("h1", { id: "heading" }, "I am h1 tag!"),
-//     React.createElement("h2", { id: "heading" }, "I am h2 tag!"), //sibling
-//   ])
-// );
-// console.log(parent);
-
-const parent = React.createElement("div", { id: "parent" }, [
-  React.createElement("div", { id: "child1" }, [
-    React.createElement("h1", { id: "heading1" }, "I am h1 tag"),
-    React.createElement("h2", { id: "heading2" }, "I am h2 tag"),
-  ]),
-  React.createElement("div", { id: "child2" }, [
-    React.createElement("h1", { id: "heading1" }, "I am h1 tag"),
-    React.createElement("h2", { id: "heading2" }, "I am h2 tag"),
-  ]),
-]);
-console.log(parent);
-// const heading = React.createElement(
-//   "h1",
-//   { id: "heading", xyz: "abc" },
-//   "Hello world from React!"
-// );
+//React Element
+const heading = <h1>Namaste React from JSX</h1>;
 // console.log(heading);
+
+//React Functional Component using arrow function
+const Title = () => <h1>Namaste React using JSX</h1>;
+
+//If not using arrow function, then use normal function like this:
+// const Title = function () {
+//   return <h1>Namaste React Title 2</h1>;
+// };
+
+const number = 100;
+
+//React Functional Component
+const HeadingComponent = () => (
+  <div class="container">
+    <h2>{100 + 200}</h2>
+    <h2>{number}</h2>
+    <h2>{console.log("hi i am from console")}</h2>
+    {heading}
+
+    {Title()}
+    <Title />
+    <Title></Title>
+    <h1>Namaste React Functional Component</h1>
+  </div>
+);
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
-// root.render(heading);
-root.render(parent);
+
+root.render(<HeadingComponent />);
