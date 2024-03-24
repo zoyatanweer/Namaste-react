@@ -3,7 +3,7 @@ const resList = [
     name: "KFC",
     id: "1",
     cuisines: "Burgers, Fast Food",
-    rating: "4",
+    rating: "3.0",
     deliveryTime: "25-30 mins",
     image:
       "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/f01666ac73626461d7455d9c24005cd4",
@@ -13,7 +13,7 @@ const resList = [
     name: "Meghna Foods",
     id: "2",
     cuisines: "Biryani, North Indian, South Indian",
-    rating: "4.5",
+    rating: "3.5",
     deliveryTime: "40-45 mins",
     image:
       "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/e0vvulfbahjxjz6k4uwi",

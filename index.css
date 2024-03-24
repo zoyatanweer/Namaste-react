@@ -16,6 +16,25 @@
   padding: 20px;
 }
 
+.filter {
+  display: flex;
+  justify-content: space-between;
+}
+.search-box,
+.search-box-btn {
+  padding: 10px;
+  margin: 10px 0 10px 10px;
+}
+.search-box-btn {
+  margin-left: 0;
+}
+
+.btn-login {
+  padding: 0 20px;
+  margin: 0 20px;
+  cursor: pointer;
+}
+
 /* body */
 .res-container {
   display: flex;
@@ -41,4 +60,21 @@
 }
 .filter-btn {
   margin: 10px;
+}
+
+/* shimmer card */
+.shimmer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 10px 10px 10px;
+}
+.shimmer-card {
+  background-color: #f0f0f0;
+  height: 300px;
+  width: 250px;
+
+  margin: 5px;
+  padding: 5px;
 }
