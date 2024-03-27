@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import RestaurantCard from "./RestaurantCard";
 import Shimmer from "./Shimmer";
 import { useState, useEffect } from "react";
@@ -18,13 +19,13 @@ const Body = () => {
     );
 
     const json = await data.json();
-    console.log(json);
+    console.log("full", json);
 
     setListOfRestaurants(
-      json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+      json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
     setFilteredRestaurants(
-      json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+      json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
   };
 
@@ -43,8 +44,6 @@ const Body = () => {
           <button
             className="search-box-btn"
             onClick={() => {
-              console.log("list", listOfRestaurants);
-
               const filteredRestaurant = listOfRestaurants.filter(
                 (res) =>
                   res.info.name
@@ -74,9 +73,19 @@ const Body = () => {
         </button>
       </div>
       <div className="res-container">
-        {/* {console.log("are", listOfRestaurants)}; */}
+        {/* {filteredRestaurants.map((restaurant) => (
+          <RestaurantCard key={restaurant.info.id} resData={restaurant} />
+        ))} */}
+
+        {/* adding link */}
+
         {filteredRestaurants.map((restaurant) => (
-          <RestaurantCard key={restaurant.id} resData={restaurant} />
+          <Link
+            to={"/restaurants/" + restaurant.info.id}
+            key={restaurant.info.id}
+          >
+            <RestaurantCard resData={restaurant} />
+          </Link>
         ))}
       </div>
     </div>
