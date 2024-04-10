@@ -78,3 +78,10 @@
   margin: 5px;
   padding: 5px;
 }
+
+/* about-us page */
+.user-card {
+  border: 1px solid black;
+  padding: 10px;
+  margin: 10px;
+}

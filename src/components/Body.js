@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import RestaurantCard from "./RestaurantCard";
 import Shimmer from "./Shimmer";
+import useOnlineStatus from "../utils/useOnlineStatus";
 import { useState, useEffect } from "react";
 
 const Body = () => {
@@ -28,6 +29,16 @@ const Body = () => {
       json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
   };
+
+  const onlineStatus = useOnlineStatus();
+
+  if (onlineStatus === false)
+    return (
+      <h1>
+        Looks like your connection is lost! Please check you internet
+        connection.
+      </h1>
+    );
 
   return listOfRestaurants.length === 0 ? (
     <Shimmer />
@@ -63,7 +74,7 @@ const Body = () => {
           className="filter-btn"
           onClick={() => {
             const filteredList = listOfRestaurants.filter(
-              (res) => res.info.avgRating > 4.5
+              (res) => res.info.avgRating > 4
             );
             setListOfRestaurants(filteredList);
             console.log("filtered", filteredList);
