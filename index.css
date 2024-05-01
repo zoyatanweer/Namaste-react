@@ -1,4 +1,8 @@
-.header {
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* .header {
   border: 1px solid;
   display: flex;
   justify-content: space-between;
@@ -33,10 +37,10 @@
   padding: 0 20px;
   margin: 0 20px;
   cursor: pointer;
-}
+} */
 
 /* body */
-.res-container {
+/* .res-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -44,9 +48,7 @@
 }
 .res-card {
   background-color: #f0f0f0;
-  /* height: 300px; */
   width: 250px;
-
   margin: 5px;
   padding: 5px;
 }
@@ -60,10 +62,10 @@
 }
 .filter-btn {
   margin: 10px;
-}
+} */
 
 /* shimmer card */
-.shimmer-container {
+/* .shimmer-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -77,11 +79,11 @@
 
   margin: 5px;
   padding: 5px;
-}
+} */
 
 /* about-us page */
-.user-card {
+/* .user-card {
   border: 1px solid black;
   padding: 10px;
   margin: 10px;
-}
+} */

@@ -19,9 +19,9 @@ const RestaurantMenu = () => {
 
   return (
     <>
-      <div>
-        <h1>{name}</h1>
-        <p>
+      <div className="m-6 p-6">
+        <h1 className="text-2xl font-bold">{name}</h1>
+        <p className="text-lg font-semibold py-4">
           {cuisines.join(", ")} : {costForTwoMessage}
         </p>
 
